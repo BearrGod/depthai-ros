@@ -84,8 +84,8 @@
         <param name="tf_prefix"             value="$(arg tf_prefix)"/>
         <param name="mode"                  value="$(arg mode)"/>
         <param name="imuMode"               value="$(arg imuMode)"/>
-        <param name="accel_freq"            value="$(accel_freq)"/>   <!-- See https://docs.luxonis.com/projects/api/en/latest/components/nodes/imu/  for all available frequencies-->
-        <param name="gyro_freq"             value="$(gyro_freq)"/>
+        <param name="accel_freq"            value="$(arg accel_freq)"/>   <!-- See https://docs.luxonis.com/projects/api/en/latest/components/nodes/imu/  for all available frequencies-->
+        <param name="gyro_freq"             value="$(arg gyro_freq)"/>
 
         <param name="lrcheck"               value="$(arg lrcheck)"/>
         <param name="extended"              value="$(arg extended)"/>

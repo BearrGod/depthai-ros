@@ -44,8 +44,8 @@ std::tuple<dai::Pipeline, int, int> createPipeline(bool enableDepth,
                                                    int detectionClassesCount,
                                                    std::string stereoResolution,
                                                    std::string rgbResolutionStr,
-                                                   uint accel_freq,
-                                                   uint gyro_freq,  
+                                                   int accel_freq,
+                                                   int gyro_freq,  
                                                    int rgbScaleNumerator,
                                                    int rgbScaleDinominator,
                                                    int previewWidth,
@@ -284,7 +284,7 @@ std::tuple<dai::Pipeline, int, int> createPipeline(bool enableDepth,
 }
 
 int main(int argc, char** argv) {
-    ros::init(argc, argv, "stereo_inertial_node");
+    ros::init(argc, argv, "stereo_inertial_tracking_node");
     ros::NodeHandle pnh("~");
 
     std::string tfPrefix, mode, mxId, resourceBaseFolder, nnPath;
@@ -307,8 +307,8 @@ int main(int argc, char** argv) {
     badParams += !pnh.getParam("tf_prefix", tfPrefix);
     badParams += !pnh.getParam("mode", mode);
     badParams += !pnh.getParam("imuMode", imuModeParam);
-    badParams += !pnh.getParam("accel_freq", imuModeParam);
-    badParams += !pnh.getParam("gyro_freq", imuModeParam);
+    badParams += !pnh.getParam("accel_freq", accel_freq);
+    badParams += !pnh.getParam("gyro_freq", gyro_freq);
 
     badParams += !pnh.getParam("lrcheck", lrcheck);
     badParams += !pnh.getParam("extended", extended);
