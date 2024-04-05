@@ -76,7 +76,7 @@
     </include>
 
     <!-- launch-prefix="xterm -e gdb (add [- - args] without space) -->
-    <node name="stereo_inertial_publisher" pkg="depthai_examples" type="stereo_inertial_node" output="screen" required="true">
+    <node name="stereo_inertial_tracker_node" pkg="depthai_examples" type="stereo_inertial_tracker_node" output="screen" required="true">
         <param name="mxId"                  value="$(arg mxId)"/>
         <param name="usb2Mode"              value="$(arg usb2Mode)"/>
         <param name="poeMode"               value="$(arg poeMode)"/>
