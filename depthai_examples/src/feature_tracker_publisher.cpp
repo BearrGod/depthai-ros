@@ -33,7 +33,9 @@ int main(int argc, char** argv) {
     auto featureTrackerRight = pipeline.create<dai::node::FeatureTracker>();
 
     auto xoutTrackedFeaturesLeft = pipeline.create<dai::node::XLinkOut>();
+    auto xoutImageLeft = pipeline.create<dai::node::XLinkOut>();
     auto xoutTrackedFeaturesRight = pipeline.create<dai::node::XLinkOut>();
+    auto xoutImageRight = pipeline.create<dai::node::XLinkOut>();
 
     xoutTrackedFeaturesLeft->setStreamName("trackedFeaturesLeft");
     xoutTrackedFeaturesRight->setStreamName("trackedFeaturesRight");

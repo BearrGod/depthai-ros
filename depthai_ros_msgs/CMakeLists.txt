@@ -33,6 +33,7 @@ add_message_files (
   ImuWithMagneticField.msg
   TrackedFeature.msg
   TrackedFeatures.msg
+  TrackedFeaturesAndImage.msg
 )
 
 ## Generate services in the 'srv' folder
